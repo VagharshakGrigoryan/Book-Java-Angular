@@ -8,10 +8,10 @@
         <outputRelativeToContentRoot value="true" />
         <module name="book-backend" />
         <module name="book-frontend" />
-        <module name="book-front" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="book-front" target="17" />
       <module name="book-frontend" target="17" />
       <module name="modul" target="17" />
     </bytecodeTargetLevel>

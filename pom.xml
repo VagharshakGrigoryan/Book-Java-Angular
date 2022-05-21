@@ -15,7 +15,6 @@
     </properties>
     <modules>
         <module>book-backend</module>
-        <module>book-frontend</module>
     </modules>
     <build>
         <plugins>
