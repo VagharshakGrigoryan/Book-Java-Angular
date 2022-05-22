@@ -44,9 +44,9 @@ public class BookController {
 		Book book = bookRepository.findById(id)
 				.orElseThrow(() -> new ResourceNotFoundException("Book not exist with id :" + id));
 
-		book.setFirstName(bookDetails.getFirstName());
-		book.setLastName(bookDetails.getLastName());
-		book.setEmailId(bookDetails.getEmailId());
+		book.setTitle(bookDetails.getTitle());
+		book.setLanguage(bookDetails.getLanguage());
+		book.setPrice(bookDetails.getPrice());
 
 		Book updateBook = bookRepository.save(book);
 		return ResponseEntity.ok(updateBook);

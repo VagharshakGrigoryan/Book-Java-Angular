@@ -3,17 +3,17 @@
 <table class = "table table-striped">
     <thead>
         <tr>
-            <th> First Name</th>
-            <th> Last Name </th>
-            <th> Email Id</th>
+            <th> Title </th>
+            <th> Language </th>
+            <th> Price</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor = "let book of books" >
 
-            <td> {{ book["firstName"] }} </td>
-            <td> {{ book["lastName"] }} </td>
-            <td> {{ book["emailId"] }} </td>
+            <td> {{ book.title }} </td>
+            <td> {{ book.language }} </td>
+            <td> {{ book.price }} </td>
             <td>
                 <button (click) = "updateBook(book['id'])" class = "btn btn-info"> Update</button>
                 <button (click) = "deleteBook(book['id'])" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>

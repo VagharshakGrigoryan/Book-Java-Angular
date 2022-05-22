@@ -10,24 +10,24 @@ public class Book {
     @GeneratedValue( strategy = GenerationType.IDENTITY )
     private long id;
 
-    @Column( name = "first_name" )
-    private String firstName;
+    @Column( name = "title" )
+    private String title;
 
-    @Column( name = "last_name" )
-    private String lastName;
+    @Column( name = "language" )
+    private String language;
 
-    @Column( name = "email_id" )
-    private String emailId;
+    @Column( name = "price" )
+    private Double price;
 
     public Book() {
 
     }
 
-    public Book(String firstName, String lastName, String emailId) {
-        super();
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.emailId = emailId;
+    public Book(long id, String title, String language, Double price) {
+        this.id = id;
+        this.title = title;
+        this.language = language;
+        this.price = price;
     }
 
     public long getId() {
@@ -38,27 +38,27 @@ public class Book {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getTitle() {
+        return title;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLanguage() {
+        return language;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLanguage(String language) {
+        this.language = language;
     }
 
-    public String getEmailId() {
-        return emailId;
+    public Double getPrice() {
+        return price;
     }
 
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
+    public void setPrice(Double price) {
+        this.price = price;
     }
 }
