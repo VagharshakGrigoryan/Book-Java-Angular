@@ -1,4 +1,5 @@
 import { AppPage } from './app.po';
+// @ts-ignore
 import { browser, logging } from 'protractor';
 
 describe('workspace-project App', () => {
@@ -10,6 +11,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
+    // @ts-ignore
     expect(page.getTitleText()).toEqual('angular-frontend app is running!');
   });
 

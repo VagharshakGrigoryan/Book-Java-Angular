@@ -3,7 +3,7 @@ import {Book} from '../book'
 import { BookService } from '../book.service'
 import { Router } from '@angular/router';
 @Component({
-  selector: 'app-employee-list',
+  selector: 'app-book-list',
   templateUrl: './book-list.component.html',
   styleUrls: ['./book-list.component.css']
 })
@@ -12,7 +12,8 @@ export class BookListComponent implements OnInit {
   books!: Book[];
 
   constructor(private bookService: BookService,
-    private router: Router) { }
+    private router: Router
+             ) { }
 
   ngOnInit(): void {
     this.getBooks();
@@ -25,17 +26,22 @@ export class BookListComponent implements OnInit {
   }
 
   bookDetails(id: number){
-    this.router.navigate(['book-details', id]);
+    this.router.navigate(['book-details', id]).then(r => this.getBooks());
   }
 
   updateBook(id: number){
-    this.router.navigate(['update-book', id]);
+    this.router.navigate(['update-book', id]).then(r => this.getBooks());
   }
 
-  deleteBook(id: number){
-    this.bookService.deleteBook(id).subscribe( data => {
-      console.log(data);
+  deleteBook(id: number) {
+    this.bookService.deleteBook(id).subscribe(data => {
+      console.log("user deleted" + data);
       this.getBooks();
-    })
+    },(err)=>{
+      console.log("unable to deleted user" + err)
+      }
+    )
+
   }
+
 }

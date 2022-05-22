@@ -4,7 +4,7 @@ import { BookService } from '../book.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-create-employee',
+  selector: 'app-create-book',
   templateUrl: './create-book.component.html',
   styleUrls: ['./create-book.component.css']
 })
@@ -26,7 +26,7 @@ export class CreateBookComponent implements OnInit {
   }
 
   goToBookList(){
-    this.router.navigate(['/books']);
+    this.router.navigate(['/books']).then(r => this.book);
   }
   onSubmit(){
     console.log(this.book);

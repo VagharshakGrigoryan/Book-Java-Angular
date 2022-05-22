@@ -4,7 +4,7 @@ import {Book} from '../book';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-update-employee',
+  selector: 'app-update-book',
   templateUrl: './update-book.component.html',
   styleUrls: ['./update-book.component.css']
 })
@@ -32,6 +32,6 @@ export class UpdateBookComponent implements OnInit {
   }
 
   goToBookList(){
-    this.router.navigate(['/employees']);
+    this.router.navigate(['/books']);
   }
 }
