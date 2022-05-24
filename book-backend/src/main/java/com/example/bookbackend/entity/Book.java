@@ -1,9 +1,10 @@
-package com.example.bookbackend.model;
+package com.example.bookbackend.entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
-@Table( name = "books" )
+@Table(name = "book")
 public class Book {
 
     @Id
@@ -19,15 +20,20 @@ public class Book {
     @Column( name = "price" )
     private Double price;
 
-    public Book() {
+    @ManyToOne
+    @JoinColumn(name="author")
+    private Author author;
 
+
+    public Book() {
     }
 
-    public Book(long id, String title, String language, Double price) {
+    public Book(long id, String title, String language, Double price, Author author) {
         this.id = id;
         this.title = title;
         this.language = language;
         this.price = price;
+        this.author = author;
     }
 
     public long getId() {
@@ -60,5 +66,13 @@ public class Book {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
     }
 }

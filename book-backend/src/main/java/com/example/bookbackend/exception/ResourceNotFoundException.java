@@ -1,17 +1,13 @@
 package com.example.bookbackend.exception;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.ResponseStatus;
+public class ResourceNotFoundException extends RuntimeException {
 
-import java.io.Serial;
+    public ResourceNotFoundException(String resource, String fieldName, Object fieldValue) {
+        super(String.format("%s with %s = '%s' not found.", resource, fieldName, fieldValue));
+    }
 
-@ResponseStatus(value = HttpStatus.NOT_FOUND)
-public class ResourceNotFoundException extends RuntimeException{
+    public ResourceNotFoundException(String resources) {
+        super(String.format("Could not find any %s.", resources));
+    }
 
-	@Serial
-	private static final long serialVersionUID = 1L;
-	
-	public ResourceNotFoundException(String message) {
-		super(message);
-	}
 }
