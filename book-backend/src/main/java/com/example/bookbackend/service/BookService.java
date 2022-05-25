@@ -21,7 +21,6 @@ public class BookService {
 
     public List<Book> getAllByAuthorId(Long id) {
         List<Book> books = bookRepository.findByAuthorId(id);
-
         if(books.isEmpty()){
             throw new ResourceNotFoundException("books", "authorId", id);
         }

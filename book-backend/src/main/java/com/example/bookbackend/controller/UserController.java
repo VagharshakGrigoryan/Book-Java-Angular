@@ -1,66 +1,66 @@
 package com.example.bookbackend.controller;
 
-import com.example.bookbackend.dtos.UserDto;
-import com.example.bookbackend.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.web.PagedResourcesAssembler;
-import org.springframework.hateoas.EntityModel;
-import org.springframework.http.HttpStatus;
+import com.example.bookbackend.entity.User;
+import com.example.bookbackend.exception.ResourceNotFoundException;
+import com.example.bookbackend.repository.UserRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+import java.util.HashMap;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Map;
 
-import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+/**
+ * @author Vagharhak Grigoryan
+ */
 
 @CrossOrigin( origins = "http://localhost:4200" )
 @RestController
-@RequestMapping("users")
+@RequestMapping("/users")
 public class UserController {
 
-    private final UserService userService;
+    private final UserRepository userRepository;
 
-    @Autowired
-    public UserController(UserService userService) {
-        this.userService = userService;
+    public UserController(UserRepository userRepository) {
+        this.userRepository = userRepository;
     }
 
     @GetMapping
-    public ResponseEntity<Object> getAll(){
-        List<EntityModel<?>> users =  this.userService.getAll().stream()
-                .map(user -> EntityModel.of(user, linkTo(BookController.class).slash(user.getId()).withSelfRel()))
-                .collect(Collectors.toList());
-
-        return ResponseEntity.ok(users);
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
     }
 
-    @GetMapping("{id}")
-    public ResponseEntity<Object> getById(@PathVariable("id") Long id) {
-        UserDto user = this.userService.getById(id);
-        EntityModel<?> entityModel = EntityModel.of(user, linkTo(UserController.class).slash(id).withSelfRel());
-        return ResponseEntity.ok(entityModel);
+    @GetMapping("/{id}")
+    public ResponseEntity<User> getUsersById(@PathVariable(value = "id") Long userId) throws ResourceNotFoundException {
+        User user = userRepository.findById(userId).orElseThrow(() -> new ResourceNotFoundException("User not found on :: " + userId));
+        return ResponseEntity.ok().body(user);
     }
 
-    @PutMapping("{id}")
-    public ResponseEntity<UserDto> updateById(@PathVariable("id") Long id, @RequestBody UserDto user){
-        UserDto userUpdated = this.userService.update(user);
-        return ResponseEntity.ok(userUpdated);
+    @PostMapping
+    public User createUser(@Valid @RequestBody User user) {
+        return userRepository.save(user);
     }
 
-    @DeleteMapping("{id}")
-    public ResponseEntity<Void> deleteById(@PathVariable("id") Long id){
-        this.userService.deleteById(id);
-        return new ResponseEntity<>(HttpStatus.OK);
+    @PutMapping("/{id}")
+    public ResponseEntity<User> updateUser(
+            @PathVariable(value = "id") Long userId, @Valid @RequestBody User userDetails)
+            throws ResourceNotFoundException {
+        User user = userRepository.findById(userId).orElseThrow(() -> new ResourceNotFoundException("User not found on :: " + userId));
+        user.setEmail(userDetails.getEmail());
+        user.setLastName(userDetails.getLastName());
+        user.setFirstName(userDetails.getFirstName());
+        user.setRole(userDetails.getRole());
+        final User updatedUser = userRepository.save(user);
+        return ResponseEntity.ok(updatedUser);
     }
 
-    @GetMapping("/paged")
-    public ResponseEntity<Object> getAllPaged(Pageable pageable, PagedResourcesAssembler<UserDto> assembler){
-        Page<UserDto> page = this.userService.getAll(pageable);
-        return ResponseEntity.ok(assembler.toModel(page));
+    @DeleteMapping("/user/{id}")
+    public Map<String, Boolean> deleteUser(@PathVariable(value = "id") Long userId) throws Exception {
+        User user = userRepository.findById(userId).orElseThrow(() -> new ResourceNotFoundException("User not found on :: " + userId));
+        userRepository.delete(user);
+        Map<String, Boolean> response = new HashMap<>();
+        response.put("deleted", Boolean.TRUE);
+        return response;
     }
-
-
 }

@@ -24,9 +24,6 @@ public class Author {
     @Column(name = "birth_date")
     private Date birthDate;
 
-    @Column(name = "memoir")
-    private String memoir;
-
     @Column(name = "url")
     private String imageUrl;
 
@@ -37,12 +34,11 @@ public class Author {
     public Author() {
     }
 
-    public Author(Long id, String firstName, String lastName, Date birthDate, String memoir, String imageUrl, List<Book> books) {
+    public Author(Long id, String firstName, String lastName, Date birthDate, String imageUrl, List<Book> books) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthDate = birthDate;
-        this.memoir = memoir;
         this.imageUrl = imageUrl;
         this.books = books;
     }
@@ -85,14 +81,6 @@ public class Author {
 
     public void setBooks(List<Book> books) {
         this.books = books;
-    }
-
-    public String getMemoir() {
-        return memoir;
-    }
-
-    public void setMemoir(String memoir) {
-        this.memoir = memoir;
     }
 
     public String getImageUrl() {

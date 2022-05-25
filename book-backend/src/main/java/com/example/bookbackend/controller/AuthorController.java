@@ -1,66 +1,69 @@
 package com.example.bookbackend.controller;
 
-import com.example.bookbackend.dtos.AuthorDto;
 import com.example.bookbackend.entity.Author;
-import com.example.bookbackend.payload.PostResponse;
-import com.example.bookbackend.service.AuthorService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.hateoas.EntityModel;
-import org.springframework.http.HttpStatus;
+import com.example.bookbackend.exception.ResourceNotFoundException;
+import com.example.bookbackend.repository.AuthorRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
-import java.net.URI;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Map;
 
-import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+/**
+ * @author Vagharhak Grigoryan
+ */
+
 
 @CrossOrigin( origins = "http://localhost:4200" )
 @RestController
-@RequestMapping("authors")
+@RequestMapping("/authors")
 public class AuthorController {
 
-    private final AuthorService authorService;
+    private final AuthorRepository authorRepository;
 
-    @Autowired
-    public AuthorController(AuthorService authorService) {
-        this.authorService = authorService;
+    public AuthorController(AuthorRepository userRepository) {
+        this.authorRepository = userRepository;
     }
 
     @GetMapping
-    public ResponseEntity<Object> getAll() {
-        List<EntityModel<?>> authors =  authorService.getAll().stream()
-                .map(book -> EntityModel.of(book, linkTo(BookController.class).slash(book.getId()).withSelfRel()))
-                .collect(Collectors.toList());
-
-        return ResponseEntity.ok(authors);
-    }
-
-    @PostMapping
-    public ResponseEntity<Object> create(@Valid @RequestBody AuthorDto authorDto){
-        Author author = this.authorService.create(authorDto);
-        URI location = ServletUriComponentsBuilder
-                .fromCurrentRequest()
-                .path("/{id}")
-                .buildAndExpand(author.getId())
-                .toUri();
-
-        return ResponseEntity.created(location).body(new PostResponse(author.getId(), location));
+    public List<Author> getAllAuthors() {
+        return authorRepository.findAll();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Object> getById(@PathVariable("id") Long id) {
-        AuthorDto author = this.authorService.getById(id);
-        EntityModel<?> entityModel = EntityModel.of(author, linkTo(BookController.class).slash(id).withSelfRel());
-        return ResponseEntity.ok(entityModel);
+    public ResponseEntity<Author> getAuthorById(@PathVariable(value = "id") Long authorId) throws ResourceNotFoundException {
+        Author author = authorRepository.findById(authorId).orElseThrow(() -> new ResourceNotFoundException("User not found on :: " + authorId));
+        return ResponseEntity.ok().body(author);
+    }
+
+    @PostMapping
+    public Author createAuthor(@Valid @RequestBody Author author) {
+        return authorRepository.save(author);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Author> updateAuthor(
+            @PathVariable(value = "id") Long authorId, @Valid @RequestBody Author authorDetail)
+            throws ResourceNotFoundException {
+
+        Author author = authorRepository.findById(authorId).orElseThrow(() -> new ResourceNotFoundException("Author not found on :: " + authorId));
+        author.setFirstName(authorDetail.getFirstName());
+        author.setLastName(authorDetail.getLastName());
+        author.setBirthDate(authorDetail.getBirthDate());
+        author.setImageUrl(authorDetail.getImageUrl());
+        final Author updateAuthor = authorRepository.save(author);
+        return ResponseEntity.ok(updateAuthor);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Object> deleteById(@PathVariable("id") Long id) {
-        this.authorService.deleteById(id);
-        return new ResponseEntity<>(HttpStatus.OK);
+    public Map<String, Boolean> deleteAuthor(@PathVariable(value = "id") Long authorId) throws Exception {
+        Author author = authorRepository.findById(authorId).orElseThrow(() -> new ResourceNotFoundException("Author not found on :: " + authorId));
+        authorRepository.delete(author);
+        Map<String, Boolean> response = new HashMap<>();
+        response.put("deleted", Boolean.TRUE);
+        return response;
     }
 }

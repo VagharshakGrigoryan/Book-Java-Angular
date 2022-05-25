@@ -12,9 +12,6 @@ public class User {
     @Column(name = "user_id")
     private Long id;
 
-    @Column(name = "password")
-    private String password;
-
     @Column(name = "first_name")
     private String firstName;
 
@@ -28,6 +25,13 @@ public class User {
     private int role;
 
 
+    public User(Long id, String firstName, String lastName, String email, int role) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.role = role;
+    }
 
     public User() {
     }
@@ -40,13 +44,7 @@ public class User {
         this.id = id;
     }
 
-    public String getPassword() {
-        return password;
-    }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
 
     public String getFirstName() {
         return firstName;
