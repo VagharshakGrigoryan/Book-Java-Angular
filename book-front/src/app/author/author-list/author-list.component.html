@@ -1,0 +1,22 @@
+<h2> Author List</h2>
+<table class = "table table-striped">
+  <thead>
+  <tr>
+    <th> Name </th>
+    <th> Last name </th>
+    <th> Birth date </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor = "let authors of authors" >
+
+    <td> {{ authors.firstName }} </td>
+    <td> {{ authors.lastName }} </td>
+    <td>
+      <button (click) = "updateAuthor(authors['id'])" class = "btn btn-info"> Update</button>
+      <button (click) = "deleteAuthor(authors['id'])" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+      <button (click) = "authorDetails(authors['id'])" class = "btn btn-info" style="margin-left: 10px"> View</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
