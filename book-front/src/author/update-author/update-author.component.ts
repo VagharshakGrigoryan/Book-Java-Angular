@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
-import {Author} from "../../model/Author";
-import {AuthorService} from "../../service/authorService/author.service";
+import {Author} from "../../app/model/Author";
+import {AuthorService} from "../../app/service/authorService/author.service";
 
 @Component({
   selector: 'app-update-author',

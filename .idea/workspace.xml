@@ -163,6 +163,7 @@
       <workItem from="1653409770669" duration="18000" />
       <workItem from="1653409811143" duration="1100000" />
       <workItem from="1653445699977" duration="6784000" />
+      <workItem from="1653487033648" duration="80000" />
     </task>
     <task id="LOCAL-00001" summary="add rest">
       <created>1653141706967</created>
@@ -241,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653452494167</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add author and user entity and controllers">
+      <created>1653487099412</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1653487099412</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
