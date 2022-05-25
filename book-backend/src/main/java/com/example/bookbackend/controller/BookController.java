@@ -35,7 +35,6 @@ public class BookController {
 
     @PostMapping
     public Book createBook(@RequestBody Book book) {
-
         return bookRepository.save(book);
     }
 

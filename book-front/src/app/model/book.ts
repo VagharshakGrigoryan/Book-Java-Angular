@@ -4,5 +4,4 @@ export class Book {
   language!: string;
   price!: number;
 
-
 }

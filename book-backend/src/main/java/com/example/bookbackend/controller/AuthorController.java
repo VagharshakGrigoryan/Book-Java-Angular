@@ -7,7 +7,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -40,7 +39,7 @@ public class AuthorController {
     }
 
     @PostMapping
-    public Author createAuthor(@Valid @RequestBody Author author) {
+    public Author createAuthor(@RequestBody Author author) {
         return authorRepository.save(author);
     }
 
