@@ -12,6 +12,7 @@
 
     <td> {{ authors.firstName }} </td>
     <td> {{ authors.lastName }} </td>
+    <td> {{ authors.birthDate | date :'medium' //noinspection UnresolvedFunction}} </td>
     <td>
       <button (click) = "updateAuthor(authors['id'])" class = "btn btn-info"> Update</button>
       <button (click) = "deleteAuthor(authors['id'])" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>

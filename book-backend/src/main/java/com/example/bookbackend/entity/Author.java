@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 @Table(name="author")
@@ -24,9 +25,6 @@ public class Author {
     @Column(name = "birth_date")
     private Date birthDate;
 
-    @Column(name = "url")
-    private String imageUrl;
-
     @OneToMany(mappedBy = "author")
     @JsonBackReference
     private List<Book> books;
@@ -34,12 +32,11 @@ public class Author {
     public Author() {
     }
 
-    public Author(Long id, String firstName, String lastName, Date birthDate, String imageUrl, List<Book> books) {
+    public Author(Long id, String firstName, String lastName, Date birthDate, List<Book> books) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthDate = birthDate;
-        this.imageUrl = imageUrl;
         this.books = books;
     }
 
@@ -81,13 +78,5 @@ public class Author {
 
     public void setBooks(List<Book> books) {
         this.books = books;
-    }
-
-    public String getImageUrl() {
-        return imageUrl;
-    }
-
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
     }
 }

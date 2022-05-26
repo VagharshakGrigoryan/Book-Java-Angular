@@ -26,12 +26,12 @@ export class UpdateAuthorComponent implements OnInit {
 
   onSubmit(){
     this.authorService.updateAuthor(this.id, this.author).subscribe(data =>{
-        this.goToBookList();
+        this.goToAuthorList();
       }
       , error => console.log(error));
   }
 
-  goToBookList(){
+  goToAuthorList(){
     this.router.navigate(['/authors']);
   }
 }

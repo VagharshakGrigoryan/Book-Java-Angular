@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Book} from '../../app/model/book'
 import { BookService } from '../../app/service/bookService/book.service'
 import { Router } from '@angular/router';
+import {Author} from "../../app/model/Author";
 @Component({
   selector: 'app-book-list',
   templateUrl: './book-list.component.html',
@@ -10,6 +11,7 @@ import { Router } from '@angular/router';
 export class BookListComponent implements OnInit {
 
   books!: Book[];
+  author!:Author;
 
   constructor(private bookService: BookService,
     private router: Router

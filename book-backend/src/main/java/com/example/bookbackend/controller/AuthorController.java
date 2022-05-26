@@ -1,6 +1,7 @@
 package com.example.bookbackend.controller;
 
 import com.example.bookbackend.entity.Author;
+import com.example.bookbackend.entity.Book;
 import com.example.bookbackend.exception.ResourceNotFoundException;
 import com.example.bookbackend.repository.AuthorRepository;
 import org.springframework.http.ResponseEntity;
@@ -32,15 +33,15 @@ public class AuthorController {
         return authorRepository.findAll();
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Author> getAuthorById(@PathVariable(value = "id") Long authorId) throws ResourceNotFoundException {
-        Author author = authorRepository.findById(authorId).orElseThrow(() -> new ResourceNotFoundException("User not found on :: " + authorId));
-        return ResponseEntity.ok().body(author);
-    }
-
     @PostMapping
     public Author createAuthor(@RequestBody Author author) {
         return authorRepository.save(author);
+    }
+
+    @GetMapping( "/{id}" )
+    public ResponseEntity<Author> getAuthorById(@PathVariable Long id) {
+        Author author = authorRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Author not exist with id :" + id));
+        return ResponseEntity.ok(author);
     }
 
     @PutMapping("/{id}")
@@ -52,7 +53,6 @@ public class AuthorController {
         author.setFirstName(authorDetail.getFirstName());
         author.setLastName(authorDetail.getLastName());
         author.setBirthDate(authorDetail.getBirthDate());
-        author.setImageUrl(authorDetail.getImageUrl());
         final Author updateAuthor = authorRepository.save(author);
         return ResponseEntity.ok(updateAuthor);
     }
