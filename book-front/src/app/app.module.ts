@@ -13,6 +13,7 @@ import { AuthorDetailsComponent } from '../author/author-details/author-details.
 import { CreateAuthorComponent } from '../author/create-author/create-author.component';
 import { UpdateAuthorComponent } from '../author/update-author/update-author.component'
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { UpdateAuthorComponent } from '../author/update-author/update-author.com
     AuthorListComponent,
     AuthorDetailsComponent,
     CreateAuthorComponent,
-    UpdateAuthorComponent
+    UpdateAuthorComponent,
+
   ],
   imports: [
     BrowserModule,

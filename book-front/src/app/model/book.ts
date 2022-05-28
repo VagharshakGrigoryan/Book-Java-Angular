@@ -5,4 +5,5 @@ export class Book {
   title!: string;
   language!: string;
   price!: number;
+  description!:string;
 }

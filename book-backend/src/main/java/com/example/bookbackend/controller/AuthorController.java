@@ -1,9 +1,8 @@
 package com.example.bookbackend.controller;
 
 import com.example.bookbackend.entity.Author;
-import com.example.bookbackend.entity.Book;
-import com.example.bookbackend.exception.ResourceNotFoundException;
 import com.example.bookbackend.repository.AuthorRepository;
+import org.springframework.data.rest.webmvc.ResourceNotFoundException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

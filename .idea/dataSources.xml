@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="rest_angular_db@localhost" uuid="c0d37ad0-a97b-4e1a-98df-19232b074bca">
+    <data-source source="LOCAL" name="rest_angular_db@localhost" uuid="150198f5-977d-49f9-b464-1035ed10c0b2">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/rest_angular_db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="book-backend/Hibernate" uuid="da843f13-1c71-444f-94c7-ba2c96204b60">
+    <data-source source="LOCAL" name="book-backend/Hibernate" uuid="70d10471-f9a5-407b-a521-2eb2d5186d5c">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>

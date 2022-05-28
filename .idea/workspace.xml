@@ -5,23 +5,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72636389-a6d9-459d-be21-5bf88e8f918b" name="Default Changelist" comment="add author and user entity and controllers">
-      <change afterPath="$PROJECT_DIR$/book-front/src/app/service/data-handler.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-front/src/assets/css/material-dashboard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-front/src/app/urlPermission/url.permission.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0ecaef55-a12d-4758-ba1c-79926b2abac6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0ecaef55-a12d-4758-ba1c-79926b2abac6/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0ecaef55-a12d-4758-ba1c-79926b2abac6/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0ecaef55-a12d-4758-ba1c-79926b2abac6/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0ecaef55-a12d-4758-ba1c-79926b2abac6/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b98aefb2-e32b-4b26-a08d-15e45e503559.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b98aefb2-e32b-4b26-a08d-15e45e503559/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b98aefb2-e32b-4b26-a08d-15e45e503559/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b98aefb2-e32b-4b26-a08d-15e45e503559/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b98aefb2-e32b-4b26-a08d-15e45e503559/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-front/src/app/service/authorService/author.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/src/app/service/authorService/author.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-front/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Book-angular-rest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Book-angular-rest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/book-backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/controller/AuthorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/controller/AuthorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/entity/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/entity/Author.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/entity/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/repository/AuthorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/repository/AuthorRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/service/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-front/.browserslistrc" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/.browserslistrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-front/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-front/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-front/HELP.md" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/HELP.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-front/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-front/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-front/karma.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/karma.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-front/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-front/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-front/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-front/src/app/model/book.ts" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/src/app/model/book.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-front/src/assets/css/material-dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/src/assets/css/material-dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-front/src/author/author-details/author-details.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/src/author/author-details/author-details.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-front/src/author/author-details/author-details.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/src/author/author-details/author-details.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-front/src/author/author-list/author-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/src/author/author-list/author-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-front/src/author/author-list/author-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/src/author/author-list/author-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-front/src/author/create-author/create-author.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/src/author/create-author/create-author.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-front/src/author/create-author/create-author.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/src/author/create-author/create-author.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-front/src/author/update-author/update-author.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/src/author/update-author/update-author.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-front/src/author/update-author/update-author.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/src/author/update-author/update-author.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-front/src/book/book-details/book-details.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/src/book/book-details/book-details.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-front/src/book/book-list/book-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/src/book/book-list/book-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-front/src/book/create-book/create-book.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/src/book/create-book/create-book.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-front/src/book/update-book/update-book.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/src/book/update-book/update-book.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-front/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/tsconfig.app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-front/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-front/tsconfig.spec.json" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/tsconfig.spec.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +62,7 @@
       <list>
         <option value="AnnotationType" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -74,7 +104,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="17" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/book-front/src/app/service" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/book-front/node_modules/@angular" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
@@ -82,7 +112,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
     <property name="show.run.dashboard.notification" value="false" />
-    <property name="ts.external.directory.path" value="C:\Users\Admin\IdeaProjects\Book-angular-rest\book-front\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\MyGames\rest-angular\book-front\node_modules\typescript\lib" />
     <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$/book-frontend" />
   </component>
   <component name="RecentsManager">
@@ -90,11 +120,11 @@
       <recent name="com.example.bookbackend" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\MyGames\rest-angular\book-front\node_modules\@angular" />
+      <recent name="C:\MyGames\rest-angular\book-front\src\app" />
+      <recent name="C:\MyGames\rest-angular\book-front\src\app\service\accountservice" />
+      <recent name="C:\MyGames\rest-angular\book-front\src\app\model" />
       <recent name="C:\Users\Admin\IdeaProjects\Book-angular-rest\book-front\src\app\service" />
-      <recent name="C:\Users\Admin\IdeaProjects\Book-angular-rest\book-front\src\assets" />
-      <recent name="C:\Users\Admin\IdeaProjects\Book-angular-rest\book-front\node_modules\@angular" />
-      <recent name="C:\Users\Admin\IdeaProjects\Book-angular-rest\book-front\src\app" />
-      <recent name="C:\Users\Admin\IdeaProjects\Book-angular-rest\book-front\node_modules" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Admin\IdeaProjects\Book-angular-rest\book-front\src" />
@@ -112,29 +142,14 @@
       <recent name="com.example.bookbackend.exception" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.Angular CLI Server (book-front)">
-    <configuration name="BookBackendApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.bookbackend.BookBackendApplication" />
-      <module name="book-backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.bookbackend.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.BookBackendApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -142,14 +157,17 @@
     <configuration name="Angular Application (book-frontend)" type="JavascriptDebugType" uri="http://localhost:4200">
       <method v="2" />
     </configuration>
-    <configuration name="BookBackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="BookBackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="book-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.bookbackend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.bookbackend.BookBackendApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
-        <option name="LaunchBrowser.Before.Run" />
       </method>
     </configuration>
     <configuration name="Angular CLI Server (book-front)" type="js.build_tools.npm">
@@ -163,14 +181,13 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.BookBackendApplication" />
       <item itemvalue="JavaScript Debug.Angular Application (book-frontend)" />
       <item itemvalue="npm.Angular CLI Server (book-front)" />
       <item itemvalue="Spring Boot.BookBackendApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BookBackendApplication" />
+        <item itemvalue="Spring Boot.BookBackendApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -202,6 +219,9 @@
       <workItem from="1653494226729" duration="797000" />
       <workItem from="1653529536544" duration="8583000" />
       <workItem from="1653579983495" duration="2058000" />
+      <workItem from="1653715010585" duration="3674000" />
+      <workItem from="1653718955875" duration="265000" />
+      <workItem from="1653753742398" duration="2341000" />
     </task>
     <task id="LOCAL-00001" summary="add rest">
       <created>1653141706967</created>

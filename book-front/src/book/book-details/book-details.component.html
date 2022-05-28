@@ -1,3 +1,9 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
 <h3> View Book Details</h3>
 <div>
     <div>
@@ -8,5 +14,36 @@
     </div>
     <div>
         <label> <b> Price: </b></label> {{book['price']}}
+  <div class="w3-panel" align="center">
+
+    <p align="left">
+			<span class="w3-button w3-hover-none w3-text-grey w3-right w3-small"
+            style="margin-bottom: 8px;"
+            onclick="document.getElementById('id01').style.display='block'">
+        <button (click) = "book" class = "btn btn-info"> More
+				about book </button>
+
+        </span>
+    </p>
+
+  </div>
+
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+      <header class="w3-container w3-purple">
+        <label> <b> Title: </b></label> {{book['title']}}      </header>
+      <br>
+      <div class="w3-container">
+        <p>        <label> <b> Description: </b></label> {{book['description']}}
+        </p>
+      </div>
+      <footer class="w3-container w3-purple w3-center">
+				<span onclick="document.getElementById('id01').style.display='none'"
+              class="w3-button w3-hover-none w3-text-white" style="text-decoration: underline;">
+                          <button (click) = "book" class = "btn btn-danger" style="margin-left: 10px"> close </button>
+        </span>
+      </footer>
     </div>
+  </div>
+</div>
 </div>

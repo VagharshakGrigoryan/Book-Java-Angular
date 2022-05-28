@@ -1,9 +1,9 @@
 package com.example.bookbackend.controller;
 
 import com.example.bookbackend.entity.Book;
-import com.example.bookbackend.exception.ResourceNotFoundException;
 import com.example.bookbackend.repository.BookRepository;
 import com.example.bookbackend.service.BookService;
+import org.springframework.data.rest.webmvc.ResourceNotFoundException;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -21,11 +21,9 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 public class BookController {
 
     private final BookRepository bookRepository;
-    private final BookService bookService;
 
     public BookController(BookRepository bookRepository, BookService bookService) {
         this.bookRepository = bookRepository;
-        this.bookService = bookService;
     }
 
     @GetMapping
@@ -53,6 +51,7 @@ public class BookController {
         book.setTitle(bookDetails.getTitle());
         book.setLanguage(bookDetails.getLanguage());
         book.setPrice(bookDetails.getPrice());
+        book.setDescription(bookDetails.getDescription());
         Book updateBook = bookRepository.save(book);
         return ResponseEntity.ok(updateBook);
     }
@@ -68,11 +67,5 @@ public class BookController {
         return ResponseEntity.ok(response);
 
     }
-    @GetMapping(value = "/search/findByAuthorId/{id}")
-    public ResponseEntity<Object> getByAuthorId(@PathVariable("id") long id){
-        List<EntityModel<?>> books =  bookService.getAllByAuthorId(id).stream()
-                .map(book -> EntityModel.of(book, linkTo(BookController.class).slash(book.getId()).withSelfRel()))
-                .collect(Collectors.toList());
-        return ResponseEntity.ok(books);
-    }
+
 }

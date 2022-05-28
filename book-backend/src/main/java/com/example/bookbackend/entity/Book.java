@@ -1,10 +1,9 @@
 package com.example.bookbackend.entity;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
-@Table(name = "book")
+@Table( name = "book" )
 public class Book {
 
     @Id
@@ -17,23 +16,35 @@ public class Book {
     @Column( name = "language" )
     private String language;
 
+    @Column( name = "description" )
+    private String description;
+
     @Column( name = "price" )
     private Double price;
 
     @ManyToOne
-    @JoinColumn(name="author")
+    @JoinColumn( name = "author" )
     private Author author;
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
     public Book() {
     }
 
-    public Book(long id, String title, String language, Double price, Author author) {
+    public Book(long id, String title, String language, Double price, Author author,String description) {
         this.id = id;
         this.title = title;
         this.language = language;
         this.price = price;
         this.author = author;
+        this.description = description;
+
     }
 
     public long getId() {
