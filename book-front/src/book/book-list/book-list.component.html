@@ -1,26 +1,62 @@
-<!--suppress AngularUndefinedBinding -->
-
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
 <h2> Book List</h2>
-<table class = "table table-striped">
-    <thead>
-        <tr>
-            <th> Title </th>
-            <th> Language </th>
-            <th> Price</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor = "let book of books" >
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th> Title</th>
+    <th> Language</th>
+    <th> Price</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let book of books">
 
-            <td> {{ book.title }} </td>
-            <td> {{ book.language }} </td>
-            <td> {{ book.price }} </td>
-            <td>
-                <button (click) = "updateBook(book['id'])" class = "btn btn-info"> Update</button>
-                <button (click) = "deleteBook(book['id'])" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
-                <button (click) = "bookDetails(book['id'])" class = "btn btn-info" style="margin-left: 10px"> View</button>
-            </td>
-        </tr>
-    </tbody>
+    <td> {{ book.title }} </td>
+    <td> {{ book.language }} </td>
+    <td> {{ book.price }} </td>
+    <td>
+      <button (click)="updateBook(book['id'])" class="btn btn-info"> Update</button>
+
+
+
+      <button (click)="bookDetails(book['id'])" class="btn btn-info" style="margin-left: 10px"> View</button>
+    </td>
+    <div class="w3-panel" align="center">
+
+      <p align="left">
+			<span class="w3-button w3-hover-none w3-text-grey w3-left w3-small"
+            style="margin-bottom: 8px;"
+            onclick="document.getElementById('id01').style.display='block'">
+                    <button (click)="book" class="btn btn-danger" style="margin-left: 10px">
+
+                   Delete </button>
+        </span>
+      </p>
+
+    </div>
+    <div id="id01" class="w3-modal">
+      <div class="w3-modal-content">
+        <header class="w3-container w3-purple" style="text-align: center">
+          <label > <b> Delete </b></label></header>
+        <br>
+        <footer class="w3-container w3-purple w3-center " >
+				<span onclick="document.getElementById('id01').style.display='none'">
+          <button (click)="deleteBook(book['id'])" class="btn btn-danger" style="margin-left: 10px"> Delete</button>
+          <button (click)="book" class="btn btn-danger" style="margin-left: 10px"> close </button>
+        </span>
+        </footer>
+      </div>
+    </div>
+
+  </tr>
+  </tbody>
+
 
 </table>
+
+</body>
