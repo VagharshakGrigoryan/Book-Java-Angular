@@ -4,12 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72636389-a6d9-459d-be21-5bf88e8f918b" name="Default Changelist" comment="add author and user entity and controllers">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="72636389-a6d9-459d-be21-5bf88e8f918b" name="Default Changelist" comment="access  delate">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_stephenc_jcip_jcip_annotations_1_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_nimbusds_content_type_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_nimbusds_lang_tag_1_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_nimbusds_nimbus_jose_jwt_9_14.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_nimbusds_oauth2_oidc_sdk_9_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mail_mail_1_4_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_7_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_7_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_7_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_7_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_3_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/dto/AuthenticationRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/dto/AuthenticationResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/dto/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/entity/UserType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/exception/BadRequestException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/exception/UserNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/security/CurrentUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/security/CurrentUserDetailServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/security/JwtAuthenticationEntryPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/security/JwtAuthenticationTokenFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/security/JwtTokenUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-front/src/assets/css/navbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-front/src/book/book-details/book-details.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/src/book/book-details/book-details.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-front/src/book/book-list/book-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/src/book/book-list/book-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-front/src/book/create-book/create-book.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/src/book/create-book/create-book.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/book-backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/book-backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-front/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/book-front/src/app/app.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +53,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -63,7 +97,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="17" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/book-front/node_modules/@angular" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/book-backend/src/main/java/com/example/bookbackend" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
@@ -71,7 +106,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
     <property name="show.run.dashboard.notification" value="false" />
-    <property name="ts.external.directory.path" value="C:\MyGames\rest-angular\book-front\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Users\Admin\AppData\Roaming\JetBreins\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$/book-frontend" />
   </component>
   <component name="RecentsManager">
@@ -79,11 +114,11 @@
       <recent name="com.example.bookbackend" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\MyGames\rest-angular\book-backend\src\main\java\com\example\bookbackend" />
       <recent name="C:\MyGames\rest-angular\book-front\node_modules\@angular" />
       <recent name="C:\MyGames\rest-angular\book-front\src\app" />
       <recent name="C:\MyGames\rest-angular\book-front\src\app\service\accountservice" />
       <recent name="C:\MyGames\rest-angular\book-front\src\app\model" />
-      <recent name="C:\Users\Admin\IdeaProjects\Book-angular-rest\book-front\src\app\service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Admin\IdeaProjects\Book-angular-rest\book-front\src" />
@@ -99,6 +134,7 @@
       <recent name="com.example.bookbackend.config" />
       <recent name="com.example.bookbackend.service" />
       <recent name="com.example.bookbackend.exception" />
+      <recent name="com.example.bookbackend.entity" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server (book-front)">
@@ -180,7 +216,11 @@
       <workItem from="1653579983495" duration="2058000" />
       <workItem from="1653715010585" duration="3674000" />
       <workItem from="1653718955875" duration="265000" />
-      <workItem from="1653753742398" duration="6067000" />
+      <workItem from="1653753742398" duration="6753000" />
+      <workItem from="1653799227811" duration="3171000" />
+      <workItem from="1653804649891" duration="2111000" />
+      <workItem from="1653920437619" duration="4788000" />
+      <workItem from="1654007344529" duration="8246000" />
     </task>
     <task id="LOCAL-00001" summary="add rest">
       <created>1653141706967</created>
@@ -287,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653756242812</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="access  delate">
+      <created>1653760119128</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1653760119128</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,7 +358,8 @@
     <MESSAGE value="add front" />
     <MESSAGE value="some change" />
     <MESSAGE value="add author and user entity and controllers" />
-    <option name="LAST_COMMIT_MESSAGE" value="add author and user entity and controllers" />
+    <MESSAGE value="access  delate" />
+    <option name="LAST_COMMIT_MESSAGE" value="access  delate" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Book_angular_rest$BookBackendApplication.ic" NAME="BookBackendApplication Coverage Results" MODIFIED="1653148014256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

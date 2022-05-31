@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Book-angular-rest.iml" filepath="$PROJECT_DIR$/Book-angular-rest.iml" />
       <module fileurl="file://$PROJECT_DIR$/book-backend/book-backend.iml" filepath="$PROJECT_DIR$/book-backend/book-backend.iml" />
       <module fileurl="file://$PROJECT_DIR$/book-frontend/book-frontend.iml" filepath="$PROJECT_DIR$/book-frontend/book-frontend.iml" />
       <module fileurl="file://$PROJECT_DIR$/frontend/frontend.iml" filepath="$PROJECT_DIR$/frontend/frontend.iml" />
