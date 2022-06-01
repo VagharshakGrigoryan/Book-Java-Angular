@@ -1,10 +1,10 @@
 package com.example.bookbackend.controller;
 
 import com.example.bookbackend.entity.Book;
+import com.example.bookbackend.exception.ResourceNotFoundException;
 import com.example.bookbackend.repository.BookRepository;
 import com.example.bookbackend.service.BookService;
-import org.springframework.data.rest.webmvc.ResourceNotFoundException;
-import org.springframework.hateoas.EntityModel;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,7 +13,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 
 @CrossOrigin( origins = "http://localhost:4200" )
 @RestController

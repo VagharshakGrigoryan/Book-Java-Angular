@@ -10,3 +10,4 @@ export class AppComponent {
   static API_URL="http://localhost:8081";
 
 }
+

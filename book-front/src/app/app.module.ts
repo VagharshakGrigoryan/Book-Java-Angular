@@ -14,6 +14,7 @@ import { CreateAuthorComponent } from '../author/create-author/create-author.com
 import { UpdateAuthorComponent } from '../author/update-author/update-author.component'
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +26,7 @@ import { UpdateAuthorComponent } from '../author/update-author/update-author.com
     AuthorDetailsComponent,
     CreateAuthorComponent,
     UpdateAuthorComponent,
+    AppComponent,
 
   ],
   imports: [

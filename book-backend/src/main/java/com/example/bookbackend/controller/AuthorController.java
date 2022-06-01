@@ -1,12 +1,12 @@
 package com.example.bookbackend.controller;
 
 import com.example.bookbackend.entity.Author;
+import com.example.bookbackend.exception.ResourceNotFoundException;
 import com.example.bookbackend.repository.AuthorRepository;
-import org.springframework.data.rest.webmvc.ResourceNotFoundException;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
