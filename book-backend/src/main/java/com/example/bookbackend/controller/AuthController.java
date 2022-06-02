@@ -28,7 +28,7 @@ import java.util.stream.Collectors;
 
 @CrossOrigin( origins = "*", maxAge = 3600 )
 @RestController
-@RequestMapping( "/api/auth" )
+@RequestMapping( "/signup" )
 public class AuthController {
     final
     AuthenticationManager authenticationManager;
@@ -53,7 +53,7 @@ public class AuthController {
         this.jwtUtils = jwtUtils;
     }
 
-    @PostMapping( "/signin" )
+    @PostMapping
     public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
 
         Authentication authentication = authenticationManager.authenticate(
@@ -74,7 +74,7 @@ public class AuthController {
                 roles));
     }
 
-    @PostMapping( "/signup" )
+    @PostMapping
     public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
         if (userRepository.existsByUsername(signUpRequest.getUsername())) {
             return ResponseEntity
@@ -88,7 +88,6 @@ public class AuthController {
                     .body(new MessageResponse("Error: Email is already in use!"));
         }
 
-        // Create new user's account
         User user = new User(signUpRequest.getUsername(),
                 signUpRequest.getEmail(),
                 encoder.encode(signUpRequest.getPassword()));

@@ -39,7 +39,10 @@
     }
 
     @media screen and (max-width: 600px) {
-      .topnav a:not(:first-child) {display: none;}
+      .topnav a:not(:first-child) {
+        display: none;
+      }
+
       .topnav a.icon {
         float: right;
         display: block;
@@ -47,12 +50,16 @@
     }
 
     @media screen and (max-width: 600px) {
-      .topnav.responsive {position: relative;}
+      .topnav.responsive {
+        position: relative;
+      }
+
       .topnav.responsive .icon {
         position: absolute;
         right: 0;
         top: 0;
       }
+
       .topnav.responsive a {
         float: none;
         display: block;
@@ -64,11 +71,14 @@
 <body>
 
 <div class="topnav" id="myTopnav">
-  <a routerLink="books" routerLinkActive="active" class="nav-link" >Book List</a>
-  <a routerLink="create-book" routerLinkActive="active" class="nav-link" >Add Book</a>
-  <a routerLink="authors" routerLinkActive="active" class="nav-link" >Author list</a>
-  <a routerLink="create-author" routerLinkActive="active" class="nav-link" >Create Author</a>
+  <a routerLink="books" routerLinkActive="active" class="nav-link">Book List</a>
+  <a routerLink="create-book" routerLinkActive="active" class="nav-link">Add Book</a>
+  <a routerLink="authors" routerLinkActive="active" class="nav-link">Author list</a>
+  <a routerLink="create-author" routerLinkActive="active" class="nav-link">Create Author</a>
+  <a routerLink="register" routerLinkActive="active" class="register" style="text-align: right">Sign Up</a>
+  <a routerLink="login" routerLinkActive="active" class="login" style="text-align: right">Login</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+
     <i class="fa fa-bars"></i>
   </a>
 </div>
@@ -87,7 +97,7 @@
     }
   }
 </script>
-<div class = "container">
+<div class="container">
   <router-outlet></router-outlet>
 </div>
 </body>

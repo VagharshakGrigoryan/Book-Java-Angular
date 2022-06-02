@@ -10,6 +10,7 @@ import {CreateAuthorComponent} from "../author/create-author/create-author.compo
 import {UpdateAuthorComponent} from "../author/update-author/update-author.component";
 
 
+
 const routes: Routes = [
   {path: 'books', component: BookListComponent},
   {path: 'create-book', component: CreateBookComponent},
@@ -20,7 +21,8 @@ const routes: Routes = [
   {path: 'create-author', component: CreateAuthorComponent},
   {path: '', redirectTo: 'authors', pathMatch: 'full'},
   {path: 'update-author/:id', component: UpdateAuthorComponent},
-  {path: 'author-details/:id', component: AuthorDetailsComponent}
+  {path: 'author-details/:id', component: AuthorDetailsComponent},
+
 
 ];
 
